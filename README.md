@@ -2,6 +2,7 @@
 
 # Specifications 📋
 This is an open-source CMS built with React, Vite, and TypeScript.
+<br>
 ⚠️ Currently under construction – New features and improvements are on the way!
 
 ## Software Used
