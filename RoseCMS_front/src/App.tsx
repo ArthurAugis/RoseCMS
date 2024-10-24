@@ -1,13 +1,15 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
+import DefaultPage from './pages/DefaultPage';
 import Gestion from './pages/cms/Gestion';
+import Accueil from './pages/Accueil';
 import NotFound from './pages/NotFound';
 
 function App() {
   return (
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Accueil />} />
+        <Route path="/default" element={<DefaultPage />} />
         <Route path="/gestion" element={<Gestion />} />
         <Route path="*" element={<NotFound />} />
       </Routes>

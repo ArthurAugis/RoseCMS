@@ -7,7 +7,6 @@ function Home() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
-    // Vérifie la préférence de mode dans le localStorage
     const storedMode = localStorage.getItem('darkMode');
     if (storedMode === 'true') {
       setIsDarkMode(true);
@@ -27,7 +26,6 @@ function Home() {
         Accéder à la gestion
       </a>
 
-      {/* Bouton pour changer le mode */}
       <div className="fixed bottom-4 right-4">
         <button 
           onClick={toggleDarkMode} 
