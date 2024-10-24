@@ -6,7 +6,7 @@ This is an open-source CMS built with React, Vite, and TypeScript.
 ⚠️ Currently under construction – New features and improvements are on the way!
 
 ## Software Used
-![Visual Studio](https://img.shields.io/badge/Visual_Studio-5C2D91?style=for-the-badge&logo=visual%20studio&logoColor=white)
+![VS Code](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visual%20studio%20code&logoColor=white)
 
 ## 🛠️ Technologies Used
 ![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
