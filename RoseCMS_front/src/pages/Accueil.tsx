@@ -14,7 +14,7 @@ function Accueil() {
         </p>
       </header>
 
-      {/* Section de présentation */}
+      {/* Presentation section */}
       <section className="my-12 w-full max-w-6xl">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
@@ -61,7 +61,7 @@ function Accueil() {
         </div>
       </section>
 
-      {/* Fonctionnalités supplémentaires */}
+      {/* Features Section */}
       <section className="my-16 w-full max-w-6xl text-center">
         <h2 className="text-4xl font-bold mb-6 text-gray-800 dark:text-gray-200">
           Fonctionnalités Clés

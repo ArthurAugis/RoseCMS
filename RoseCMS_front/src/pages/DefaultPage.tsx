@@ -1,41 +1,39 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { FaSun, FaMoon } from 'react-icons/fa';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FiSettings, FiChevronRight } from 'react-icons/fi';
 
-function Home() {
-  const navigate = useNavigate();
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    const storedMode = localStorage.getItem('darkMode');
-    if (storedMode === 'true') {
-      setIsDarkMode(true);
-    }
-  }, [navigate]);
-
-  const toggleDarkMode = () => {
-    setIsDarkMode(!isDarkMode);
-    localStorage.setItem('darkMode', !isDarkMode);
-  };
-
+const DefaultPage = () => {
   return (
-    <div className={`flex flex-col justify-center items-center h-screen ${isDarkMode ? 'bg-gray-800 text-white' : 'bg-white text-black'}`}>
-      <h1 className="text-4xl font-bold mb-4">Bienvenue dans votre CMS !</h1>
-      <p className="text-lg mb-6">Ceci est la page par défaut. Vous pouvez commencer à modifier votre site en cliquant sur le bouton ci-dessous.</p>
-      <a href="/gestion" className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition">
-        Accéder à la gestion
-      </a>
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200 flex flex-col items-center justify-between">
+      {/* Header */}
+      <header className="w-full py-4 bg-purple-600 text-white text-center">
+        <h1 className="text-2xl font-semibold flex items-center justify-center gap-2">
+          Bienvenue sur votre site RoseCMS
+        </h1>
+      </header>
 
-      <div className="fixed bottom-4 right-4">
-        <button 
-          onClick={toggleDarkMode} 
-          className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-300 hover:bg-gray-400 transition"
+      {/* Main Content */}
+      <main className="flex-1 flex flex-col items-center justify-center text-center px-4">
+        <h2 className="text-3xl font-bold mb-4 flex items-center gap-2">
+          🎉 Félicitations ! Voici votre site de départ, prêt à être personnalisé.
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 flex items-center gap-2">
+          Commencez à ajouter votre contenu unique et à le façonner comme vous le souhaitez. ✨
+        </p>
+        <Link
+          to="/gestion"
+          className="mt-4 px-6 py-2 bg-purple-600 text-white rounded-lg shadow-md hover:bg-purple-700 flex items-center gap-2"
         >
-          {isDarkMode ? <FaMoon className="text-gray-800" /> : <FaSun className="text-yellow-500" />}
-        </button>
-      </div>
+          <FiSettings /> Personnaliser mon site <FiChevronRight />
+        </Link>
+      </main>
+
+      {/* Footer */}
+      <footer className="w-full py-4 bg-gray-800 text-gray-400 text-center">
+        <p>&copy; 2024 RoseCMS. Créez, personnalisez et partagez facilement ! 🚀</p>
+      </footer>
     </div>
   );
-}
+};
 
-export default Home;
+export default DefaultPage;

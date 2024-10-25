@@ -4,6 +4,7 @@ import DefaultPage from './pages/DefaultPage';
 import Gestion from './pages/cms/Gestion';
 import Accueil from './pages/Accueil';
 import NotFound from './pages/NotFound';
+import AuthPage from './pages/AuthPage';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Route path="/" element={<Accueil />} />
         <Route path="/default" element={<DefaultPage />} />
         <Route path="/gestion" element={<Gestion />} />
+        <Route path="/auth" element={<AuthPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
   );

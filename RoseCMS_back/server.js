@@ -9,10 +9,10 @@ app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: '',
-  database: 'react',
+  host: process.env.BDD_HOST,
+  user: process.env.BDD_USER,
+  password: process.env.BDD_PASSWORD,
+  database: process.env.BDD_NAME,
 });
 
 // Vérification de la connexion
